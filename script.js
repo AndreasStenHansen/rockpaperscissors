@@ -9,5 +9,5 @@ function getComputerChoice() {
 }
 
 function getPlayerChoice() {
-    prompt("Please provide choice")
+    return prompt("Please provide choice")
 }
