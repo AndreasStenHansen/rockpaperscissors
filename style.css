@@ -1,0 +1,8 @@
+body {
+    margin: 0px;
+}
+.hello {
+    display: flex;
+    height: 100vh;
+    width: 500px;
+}
