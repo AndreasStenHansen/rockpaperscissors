@@ -1,8 +1,32 @@
 body {
     margin: 0px;
 }
-.hello {
+
+/* {
+    border: 1px solid red;
+} */ 
+
+.master-container {
+    display: flex;
+}
+
+.left-hand-container {
     display: flex;
     height: 100vh;
-    width: 500px;
+    width: 300px;
+    overflow:hidden;
+}
+
+.right-hand-container {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.first-headline {
+    display: flex;
+    justify-content:  center;
+    padding: 1em;
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
 }
