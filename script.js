@@ -13,30 +13,30 @@ function getComputerChoice() {
 //     return playerInput.charAt(0).toUpperCase() + playerInput.slice(1).toLowerCase()
 // }
 
-// function SingleRound(playerSelection, computerSelection) {
-//     if (playerSelection == computerSelection) {
-//         console.log("Draw!")
-//         return
-//     } else if (playerSelection == "Rock" && computerSelection == "Scissors") {
-//         console.log("You Win! Rock beats Scissors")
-//         return "Player win"
-//     } else if (playerSelection == "Rock" && computerSelection == "Paper") {
-//         console.log("You Lose! Paper beats Rock")
-//         return "Player lose"
-//     } else if (playerSelection == "Paper" && computerSelection == "Scissors") {
-//         console.log("You Lose! Scissors beats Paper")
-//         return "Player lose"
-//     } else if (playerSelection == "Paper" && computerSelection == "Rock") {
-//         console.log("You Win! Paper Beats Rock")
-//         return "Player win"
-//     } else if (playerSelection == "Scissors" && computerSelection == "Rocks") {
-//         console.log("You Lose! Rocks Beats Scissors")
-//         return "Player lose"
-//     } else if (playerSelection == "Scissors" && computerSelection == "Paper") {
-//         console.log("You Win! Scissors Beats Paper")
-//         return "Player win"
-//     }   
-// }
+function SingleRound(playerSelection, computerSelection) {
+    if (playerSelection == computerSelection) {
+        //console.log("Draw!")
+        return "Draw"
+    } else if (playerSelection == "Rock" && computerSelection == "Scissors") {
+        //console.log("You Win! Rock beats Scissors")
+        return "Win"
+    } else if (playerSelection == "Rock" && computerSelection == "Paper") {
+        //console.log("You Lose! Paper beats Rock")
+        return "Lose"
+    } else if (playerSelection == "Paper" && computerSelection == "Scissors") {
+        //console.log("You Lose! Scissors beats Paper")
+        return "Lose"
+    } else if (playerSelection == "Paper" && computerSelection == "Rock") {
+        //console.log("You Win! Paper Beats Rock")
+        return "Win"
+    } else if (playerSelection == "Scissors" && computerSelection == "Rock") {
+        //console.log("You Lose! Rocks Beats Scissors")
+        return "Lose"
+    } else if (playerSelection == "Scissors" && computerSelection == "Paper") {
+        //console.log("You Win! Scissors Beats Paper")
+        return "Win"
+    }   
+}
 
 // function game() {
 //     playRound();
@@ -116,17 +116,90 @@ function showComputerChoice() {
     else if  (computerChoice == "Scissors") {
         computer.src = "./png/scissor.png"
     }
+    return computerChoice;
 }
 
 // Event listener for clicks on the icons
 humanPaper.addEventListener('click', function(){
-    showComputerChoice();
+    const computerSelection = showComputerChoice();
+    console.log(computerSelection)
+    const playerSelection = "Paper"
+    console.log(playerSelection)
+    const outcome = SingleRound(playerSelection, computerSelection);
+    console.log(outcome)
+    if (outcome == "Win") {
+        var humanScore = document.getElementById('humanscore');
+        //console.log(humanScore.innerText)
+        var NewScore = +humanScore.innerText + 1;
+        //console.log(NewScore)
+        humanScore.innerText = NewScore;
+    } else if (outcome == "Draw") {
+        var drawScore = document.getElementById('drawscore');
+        //console.log(humanScore.innerText)
+        var NewScore = +drawScore.innerText + 1;
+        //console.log(NewScore)
+        drawScore.innerText = NewScore;
+    } else if (outcome == "Lose") {
+        var computerScore = document.getElementById('computerscore');
+        //console.log(humanScore.innerText)
+        var NewScore = +computerScore.innerText + 1;
+        //console.log(NewScore)
+        computerScore.innerText = NewScore;
+    }
 })
 
 humanRock.addEventListener('click', function(){
-    showComputerChoice();
+    const computerSelection = showComputerChoice();
+    console.log(computerSelection)
+    const playerSelection = "Rock"
+    console.log(playerSelection)
+    const outcome = SingleRound(playerSelection, computerSelection);
+    console.log(outcome)
+    if (outcome == "Win") {
+        var humanScore = document.getElementById('humanscore');
+        //console.log(humanScore.innerText)
+        var NewScore = +humanScore.innerText + 1;
+        //console.log(NewScore)
+        humanScore.innerText = NewScore;
+    } else if (outcome == "Draw") {
+        var drawScore = document.getElementById('drawscore');
+        //console.log(humanScore.innerText)
+        var NewScore = +drawScore.innerText + 1;
+        //console.log(NewScore)
+        drawScore.innerText = NewScore;
+    } else if (outcome == "Lose") {
+        var computerScore = document.getElementById('computerscore');
+        //console.log(humanScore.innerText)
+        var NewScore = +computerScore.innerText + 1;
+        //console.log(NewScore)
+        computerScore.innerText = NewScore;
+    }
 })
 
 humanScissors.addEventListener('click', function(){
-    showComputerChoice();
+    const computerSelection = showComputerChoice();
+    console.log(computerSelection)
+    const playerSelection = "Scissors"
+    console.log(playerSelection)
+    const outcome = SingleRound(playerSelection, computerSelection);
+    console.log(outcome)
+    if (outcome == "Win") {
+        var humanScore = document.getElementById('humanscore');
+        //console.log(humanScore.innerText)
+        var NewScore = +humanScore.innerText + 1;
+        //console.log(NewScore)
+        humanScore.innerText = NewScore;
+    } else if (outcome == "Draw") {
+        var drawScore = document.getElementById('drawscore');
+        //console.log(humanScore.innerText)
+        var NewScore = +drawScore.innerText + 1;
+        //console.log(NewScore)
+        drawScore.innerText = NewScore;
+    } else if (outcome == "Lose") {
+        var computerScore = document.getElementById('computerscore');
+        //console.log(humanScore.innerText)
+        var NewScore = +computerScore.innerText + 1;
+        //console.log(NewScore)
+        computerScore.innerText = NewScore;
+    }
 })
