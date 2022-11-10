@@ -29,13 +29,13 @@ body {
     display: flex;
     justify-content:  center;
     padding: 0.3em;
-    font-size: 40px;
+    font-size: 35px;
     font-family: 'Roboto', sans-serif;
 }
 
 .picture {
-    height: 100px;
-    width: 100px;
+    height: 75px;
+    width: 75px;
 }
 
 .picture-bar {
